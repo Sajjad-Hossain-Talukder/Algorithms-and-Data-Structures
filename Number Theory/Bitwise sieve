@@ -26,6 +26,8 @@ void sieve()
 {
     int i,j,sqrtN;
     sqrtN = sqrt(N);
+    status[0] = 1 ;
+    status[0] = ( status[0]<<1)|1;
     for(i = 4 ; i<=N ; i+=2) status[i/32] = Set(status[i/32],i%32);
     for( i = 3 ; i <= sqrtN ; i+=2)
     {
